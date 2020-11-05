@@ -1,0 +1,10 @@
+.customers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    .customers-card-content {
+        width: 100%;
+    }
+}
