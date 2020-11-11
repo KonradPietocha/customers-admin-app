@@ -9,8 +9,6 @@ import { User } from './interface/user';
 })
 export class LoginService {
 
-  constructor() { }
-
   isLogin: boolean;
 
   getLogin(data: User): Observable<User> {

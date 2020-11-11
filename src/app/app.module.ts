@@ -15,6 +15,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { TableSortSearchPageComponent } from './table-sort-search-page/table-sort-search-page.component';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TableSortSearchPageComponent } from './table-sort-search-page/table-sor
     MatButtonModule,
     MatTableModule,
     MatSortModule,
-    MatPaginatorModule 
+    MatPaginatorModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

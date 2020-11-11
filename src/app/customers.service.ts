@@ -10,8 +10,6 @@ import { CUSTOMERS } from '../mock/customers';
 })
 export class CustomersService {
 
-  constructor() { }
-
   getCustomers(): Observable<Customer[]> {
     return of(CUSTOMERS);
   }
