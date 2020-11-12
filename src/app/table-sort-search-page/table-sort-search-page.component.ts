@@ -13,9 +13,9 @@ import { Customer } from '../interface/customer';
 })
 export class TableSortSearchPageComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = [
-    'name', 
-    'surname', 
-    'dateOfBirth', 
+    'name',
+    'surname',
+    'dateOfBirth',
     'branch',
     'branchSubcategory',
     'phone',

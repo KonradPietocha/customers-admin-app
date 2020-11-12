@@ -1,21 +1,21 @@
 .login-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  .login-panel-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
-    .login-panel-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80vw;
-        height: 80vh;
-        .login-panel-button {
-            display: flex;
-            justify-content: flex-end;
-            width: 180px;
-        }
+    width: 80vw;
+    height: 80vh;
+    .login-panel-button {
+      display: flex;
+      justify-content: flex-end;
+      width: 180px;
     }
+  }
 }
