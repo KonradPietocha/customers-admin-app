@@ -1,0 +1,33 @@
+.customer-editor {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(black, 0.5);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  .customer-editor-card {
+    width: 80%;
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      hr {
+        width: 50%;
+      }
+      label {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+      }
+      .branch-group {
+        width: 50%;
+        label {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

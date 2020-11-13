@@ -51,8 +51,7 @@
     transition: transform 0.2s ease-out;
     pointer-events: none;
   }
-  &:hover,
-  &:focus {
+  &:hover {
     &:before {
       opacity: 1;
       transform: translate(-50%, -10px);

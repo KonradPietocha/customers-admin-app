@@ -14,14 +14,15 @@ import { Customer } from '../interface/customer';
 export class TableSortSearchPageComponent implements OnInit, AfterViewInit {
   displayedColumns: string[] = [
     'name',
-    'surname',
-    'dateOfBirth',
+    'lastName',
+    'birthDate',
     'branch',
-    'branchSubcategory',
+    'branchCategory',
     'phone',
     'eMail'
   ];
   dataSource: MatTableDataSource<Customer>;
+  editCustomers: boolean;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -49,5 +50,10 @@ export class TableSortSearchPageComponent implements OnInit, AfterViewInit {
     if (this.dataSource.paginator) {
       this.dataSource.paginator.firstPage();
     }
+  }
+
+  onAdd(): void {
+    this.editCustomers = true;
+    console.log(this.editCustomers);
   }
 }

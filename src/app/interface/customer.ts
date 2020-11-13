@@ -1,9 +1,9 @@
 export interface Customer {
     name: string;
-    surname: string;
-    dateOfBirth: string;
+    lastName: string;
+    birthDate: string;
     branch: string;
-    branchSubcategory: string;
+    branchCategory: string;
     phone: number;
     eMail: string;
 }

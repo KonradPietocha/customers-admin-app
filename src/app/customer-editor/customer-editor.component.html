@@ -1,44 +1,53 @@
-<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
-  <label>
-    Imię:
-    <input type="text" formControlName="firstName" required />
-  </label>
+<div *ngIf="editCustomers" class="customer-editor">
+  <mat-card class="customer-editor-card">
+    <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+      <h3><b>Profil</b></h3>
+      <label>
+        Imię:
+        <input type="text" formControlName="firstName" required />
+      </label>
 
-  <label>
-    Nazwisko:
-    <input type="text" formControlName="lastName" required />
-  </label>
+      <label>
+        Nazwisko:
+        <input type="text" formControlName="lastName" required />
+      </label>
 
-  <label>
-    Data urodzenia:
-    <input type="text" formControlName="birthDate" required />
-  </label>
+      <label>
+        Data urodzenia:
+        <input
+          type="date"
+          formControlName="birthDate"
+          placeholder="rrrr-mm-dd"
+          required
+          max="maxBirthDate"
+        />
+      </label>
 
-  <label>
-    Numer telefonu:
-    <input type="text" formControlName="phone" required />
-  </label>
+      <label>
+        Numer telefonu:
+        <input type="number" formControlName="phone" required minlength="9" />
+      </label>
 
-  <label>
-    Adres e-mail:
-    <input type="text" formControlName="eMail" required />
-  </label>
+      <label>
+        Adres e-mail:
+        <input type="email" formControlName="eMail" required />
+      </label>
+      <hr />
+      <div class="branch-group" formGroupName="branch">
+        <h3><b>Branża:</b></h3>
 
-  <div formGroupName="branch">
-    <h3>Branża</h3>
+        <label>
+          Nazwa branży:
+          <input type="text" formControlName="branch" required />
+        </label>
 
-    <label>
-      Nazwa branży:
-      <input type="text" formControlName="name" required />
-    </label>
+        <label>
+          Kategoria:
+          <input type="text" formControlName="branchCategory" required />
+        </label>
+      </div>
 
-    <label>
-      Kategoria:
-      <input type="text" formControlName="subCategory" required />
-    </label>
-  </div>
-
-  <button type="submit" [disabled]="!profileForm.valid">Zapisz</button>
-</form>
-
-<hr />
+      <button type="submit" [disabled]="!profileForm.valid">Zapisz</button>
+    </form>
+  </mat-card>
+</div>
