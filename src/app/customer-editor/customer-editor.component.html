@@ -1,0 +1,44 @@
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label>
+    Imię:
+    <input type="text" formControlName="firstName" required />
+  </label>
+
+  <label>
+    Nazwisko:
+    <input type="text" formControlName="lastName" required />
+  </label>
+
+  <label>
+    Data urodzenia:
+    <input type="text" formControlName="birthDate" required />
+  </label>
+
+  <label>
+    Numer telefonu:
+    <input type="text" formControlName="phone" required />
+  </label>
+
+  <label>
+    Adres e-mail:
+    <input type="text" formControlName="eMail" required />
+  </label>
+
+  <div formGroupName="branch">
+    <h3>Branża</h3>
+
+    <label>
+      Nazwa branży:
+      <input type="text" formControlName="name" required />
+    </label>
+
+    <label>
+      Kategoria:
+      <input type="text" formControlName="subCategory" required />
+    </label>
+  </div>
+
+  <button type="submit" [disabled]="!profileForm.valid">Zapisz</button>
+</form>
+
+<hr />
